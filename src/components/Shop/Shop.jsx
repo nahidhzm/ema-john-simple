@@ -38,6 +38,21 @@ const Shop = () => {
     const handleAddToCart = (product) => {
         // cart.push(product); // normal js push
         const newcart = [...cart, product];
+        // let newCart = [];
+        // advanced way
+        // if product dosen't exist in the cart , then set quantity = 1
+        // if exist update the quantity by 1
+        // const exists = cart.find(pd => pd.id === product.id);
+        // if(!exists){
+        //     product.quantity = 1;
+        //     newCart= [...cart, product]
+        // }
+        // else{
+        //     exists.quantity = exists.quantity + 1;
+        //     const remaining = cart.filter(pd => pd.id !== product.id);
+        //     newCart = [...remaining, exists];
+        // }
+
         setCart(newcart);
         addToDb(product.id);
     }

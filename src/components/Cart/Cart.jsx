@@ -7,6 +7,7 @@ const Cart = ({cart}) => { // option 3
     // const cart = props.cart;
     // distructring way alternative option
     // const {cart} = props;
+    console.log(cart);
     let totalPrice = 0;
     let totalShipping = 0;
     for (const product of cart){
